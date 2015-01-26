@@ -1,6 +1,7 @@
-# api
+# API
 
 ## Structure
+
 
 ## Database Schema
 ### Tables
@@ -14,7 +15,7 @@ Links have:
     - submitter -> reference to user
     - timestamp
 
-Users have
+Users have:
     - username
     - email
     - password
@@ -27,17 +28,17 @@ Users have
     - API user?
     - Applications -> reference to applications
 
-Tags have
+Tags have:
     - links -> reference to links
     - description
     - title
 
-Applications have
+Applications have:
     - Name
     - Description
     - Requested endpoints -> reference to endpoints
 
-Endpoints have
+Endpoints have:
     - Name
     - Purpose
 
