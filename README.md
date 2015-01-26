@@ -6,7 +6,7 @@
 ## Database Schema
 ### Tables
 
-Links have:
+- Links have:
     - name
     - link
     - upvotes
@@ -15,7 +15,7 @@ Links have:
     - submitter -> reference to user
     - timestamp
 
-Users have:
+- Users have:
     - username
     - email
     - password
@@ -28,17 +28,17 @@ Users have:
     - API user?
     - Applications -> reference to applications
 
-Tags have:
+- Tags have:
     - links -> reference to links
     - description
     - title
 
-Applications have:
+- Applications have:
     - Name
     - Description
     - Requested endpoints -> reference to endpoints
 
-Endpoints have:
+- Endpoints have:
     - Name
     - Purpose
 
@@ -61,8 +61,8 @@ Each permission group gets all the permissions of the ones below
 
 
 ## Stack Used
-[Express.js](http://expressjs.com/)
-[Node.js](nodejs.org)
-[PostgreSQL](http://www.postgresql.org/)
-[Passport.js](http://passportjs.org/)
+- [Express.js](http://expressjs.com/)
+- [Node.js](nodejs.org)
+- [PostgreSQL](http://www.postgresql.org/)
+- [Passport.js](http://passportjs.org/)
 
