@@ -48,6 +48,7 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
+  console.log(req);
   console.log('Express server listening on port ' + app.get('port'));
 });
 
@@ -70,6 +71,27 @@ var server = app.listen(3000, function () {
   console.log('Example app listening at http://%s:%s', host, port)
 
 })
+*/
+
+
+/* POSTGRES TEMPLATE: npm install pg
+var pg = require('pg');
+var conString = "postgres://username:password@localhost/database";
+
+pg.connect(conString, function(err, client, done) {
+
+  if (err) {
+    return console.error('error fetching client from pool', err);
+  }
+  client.query('SELECT $1::int AS number', ['1'], function(err, result) {
+    done();
+    if (err) {
+      return console.error('error running query', err);
+    }
+    console.log(result.rows[0].number);
+  });
+
+});
 */
 
 
