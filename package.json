@@ -1,9 +1,22 @@
 {
-	"name": "ocm",
-	"description": "The Open Computing Manual Api",
-	"version": "0.0.1",
-	"private": true,
-	"dependencies": {
-		"express": "3.x"
-	}
-} 
+  "name": "OCM",
+  "version": "0.0.1",
+  "description": "The Open Computing Manual API",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parashar/api"
+  },
+  "dependencies": {
+    "express": "^3.19.2",
+    "pg": "^4.2.0",
+    "pg-hstore": "^2.3.1",
+    "sequelize": "^2.0.0-rc1",
+    "sequelize-cli": "^1.1.0",
+    "jade": "*"
+  }
+}
