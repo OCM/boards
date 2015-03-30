@@ -3,8 +3,8 @@ var schema = {
       id: {type: 'bigIncrements', nullable: false, primary: true},
       uuid: {type: 'string', maxlength: 36, nullable: false},
       title: {type: 'string', maxlength: 150, nullable: false},
-      upvotes: {type: 'integer', maxlength: 65535, nullable: true},
-      downvotes: {type: 'integer', maxlength: 65535, nullable: true},
+      upvotes: {type: 'integer', maxlength: 65535, nullable: false},
+      downvotes: {type: 'integer', maxlength: 65535, nullable: false},
       meta_title: {type: 'string', maxlength: 150, nullable: true},
       meta_description: {type: 'string', maxlength: 200, nullable: true},
       submitter: {type: 'integer', nullable: false}, // references user
