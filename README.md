@@ -6,41 +6,78 @@
 ## Database Schema
 ### Tables
 
-- Links have:
-    - name
-    - link
-    - upvotes
-    - downvotes
-    - tags -> reference to tag
-    - submitter -> reference to user
-    - timestamp
+Core Feature Set (MVP)
+- Ability to search for topic
+- Ability to discover random content
+- Ability to create account
+- Ability to submit links and tags
+- Ability to upvote/downvote content
+- Ability to link save content (?)
+- Ability to flag irrelevant content
+- Gravatar Images
 
-- Users have:
-    - username
-    - email
-    - password
-    - description
-    - website
-    - karma (upvotes and downvotes for submissions)
-    - account creation date
-    - submitted links -> reference to links
-    - rank (admin, banned, standard)
-    - API user?
-    - Applications -> reference to applications
+Later Feature Set
+- Ability to create personal boards
+- Pushover Notifications
+- Email Digest (Mailchimp)
+- Difficulty
+- Parent tags, dependent tags (Tag Hierarchy)
 
-- Tags have:
-    - links -> reference to links
-    - description
-    - title
 
-- Applications have:
-    - Name
-    - Description
-    - Requested endpoints -> reference to endpoints
+## Tag Categories
 
-- Endpoints have:
-    - Name
-    - Purpose
+Blue   - Computer Science
+Green  - Design
+Red    - Literature
+Yellow - Engineering
+Black  - Mathematics
+White  - Physical Sciences
+Violet - Social Sciences
+
+.
+├── Blue - Computer Science (http://bit.ly/19L8QKw)
+│   ├── Web Programming
+│   ├── Mathematical Foundations
+│   ├── Algorithms
+│   ├── Data Structures
+│   ├── Artificial Intelligence
+│   ├── Communications
+│   ├── Security
+│   ├── Computer Architecture
+│   ├── Computer Graphics
+│   ├── Distributed Systems
+│   ├── Databases
+│   ├── Programming Languages
+│   ├── Software Engineering
+│   ├── Scientific Computing
+│   └── Computation Theory
+├── Green - Design (http://bit.ly/19L9hof)
+│   ├── Object Design
+│   ├── System Design
+│   ├── Design Tools
+│   ├── Experience Design
+│   ├── Environment Design
+│   ├── Communications
+│   ├── Security
+│   ├── Computer Architecture
+│   ├── Computer Graphics
+│   ├── Distributed Systems
+│   ├── Databases
+│   ├── Programming Languages
+│   ├── Software Engineering
+│   ├── Scientific Computing
+│   └── Computation Theory
+├── Red    - Literature
+├── Yellow - Engineering
+├── Black  - Mathematics
+├── White  - Physical Sciences
+├── Violet - Social Sciences
+│   ├── Anthropology
+│   ├── Archeology
+│   ├── Economics
+│   ├── Education
+│   └── users.js
+└── schema.sql
 
 
 ### Permissions
