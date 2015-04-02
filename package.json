@@ -16,6 +16,7 @@
     "express": "^4.12.3",
     "express-handlebars": "^2.0.0",
     "lazy.js": "^0.4.0",
+    "morgan": "^1.5.2",
     "pg": "^4.2.0",
     "pg-hstore": "^2.3.1"
   }
