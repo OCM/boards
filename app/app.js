@@ -2,7 +2,7 @@ var express    = require('express');
 var exphbs     = require('express-handlebars');
 var bodyParser = require('body-parser');
 var morgan     = require('morgan')
-var routes     = require('./routes/routes.js');
+var routes     = require('./routes.js');
 
 // Define basic variables and initialize the app
 var host      = '127.0.0.1';
