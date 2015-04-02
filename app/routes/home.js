@@ -1,27 +1,26 @@
 var express = require('express');
-var pg      = require('pg');
+var pg      = require('pg-promise')();
+var config  = require("../../db.json");
 var router  = express.Router();
-
-var db   = require("../../db.json");
-var conn = "postgres://" + db.user + ":" + db.pass + "@localhost/atrus";
+var db      = pg(config);
 
 router.get('/', function(req, res) {
-  pg.connect(conn, function(err, client, done) {
-    if (err) {
-      return console.error('error fetching client from pool', err);
-    }
-
-    client.query('SELECT title FROM links;', function (err, result) {
-      done();
-
-      if (err) {
-        return console.error('error running query', err);
-      }
-
-      res.render('home', {links: result.rows});
-      client.end();
-    });
-  });
+  db.connect()
+    .then(function (conn) {
+      // Connection succeeded
+      return conn.query('SELECT title FROM links;');
+    }, function (reason) {
+      // Connection failed
+      console.log(reason);
+    })
+    .then(function (data) {
+      // Query succeeded
+      res.render('home', {links: data});
+    }, function (reason) {
+      // Query failed
+      console.log(reason);
+    })
+    .done();
 });
 
 module.exports = router;
