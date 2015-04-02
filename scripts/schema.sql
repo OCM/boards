@@ -1,4 +1,4 @@
-CREATE TYPE roles AS ENUM ('user', 'mod', 'admin');
+CREATE TYPE roles AS ENUM ('banned', 'user', 'mod', 'admin');
 CREATE TYPE link_status AS ENUM ('review',
                                  'published',
                                  'hidden',
