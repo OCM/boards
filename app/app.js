@@ -8,6 +8,9 @@ var app       = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.engine('handlebars', exphbs({defaultLayout: 'main', extname: '.hbs'}));
+app.set('views', './templates');
+app.set('view engine', 'handlebars');
 
 routes.forEach(function (route) {
     app.use(route.path, route.route);
