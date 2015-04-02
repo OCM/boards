@@ -24,5 +24,5 @@ router.get('/', function (req, res) {
 
 app.use('/', router);
 app.listen(port, host, function () {
-  console.log('Server live at %d:%d in %s mode', host, port, app.get('env'));
+  console.log('Server live at %s:%d in %s mode', host, port, app.get('env'));
 });
