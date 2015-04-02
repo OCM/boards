@@ -1,12 +1,7 @@
-# API
-
-## Structure
-
-
-## Database Schema
-### Tables
+# Atrus
 
 Core Feature Set (MVP)
+
 - Ability to search for topic
 - Ability to discover random content
 - Ability to create account
@@ -17,23 +12,24 @@ Core Feature Set (MVP)
 - Gravatar Images
 
 Later Feature Set
+
 - Ability to create personal boards
 - Pushover Notifications
 - Email Digest (Mailchimp)
 - Difficulty
 - Parent tags, dependent tags (Tag Hierarchy)
 
-
 ## Tag Categories
 
-Blue   - Computer Science
-Green  - Design
-Red    - Literature
-Yellow - Engineering
-Black  - Mathematics
-White  - Physical Sciences
-Violet - Social Sciences
+- __Blue__: Computer Science
+- __Green__: Design
+- __Red__: Literature
+- __Yellow__: Engineering
+- __Black__: Mathematics
+- __White__: Physical Sciences
+- __Violet__: Social Sciences
 
+```
 .
 ├── Blue - Computer Science (http://bit.ly/19L8QKw)
 │   ├── Web Programming
@@ -78,9 +74,9 @@ Violet - Social Sciences
 │   ├── Education
 │   └── users.js
 └── schema.sql
+```
 
-
-### Permissions
+## Permissions
 
 Each permission group gets all the permissions of the ones below
 
@@ -98,6 +94,7 @@ Each permission group gets all the permissions of the ones below
 
 
 ## Stack Used
+
 - [Express.js](http://expressjs.com/)
 - [Node.js](nodejs.org)
 - [PostgreSQL](http://www.postgresql.org/)
