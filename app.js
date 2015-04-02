@@ -1,84 +1,17 @@
-
-/* Requirements */
 var http       = require('http');
 var express    = require('express');
 var bodyParser = require('body-parser');
 var pg         = require('pg');
 var path       = require('path');
-var config     = require('./database/config');
-var _          = require('lodash');
+var Lazy       = require('lazy.js');
 
-
-/* Declarations */
 var host      = '127.0.0.1';
 var port      = 3000;
 var app       = express();
-var knex      = config.dbConfig;
-var bookshelf = config.bookshelf;
 var router    = express.Router();
 
-
-/* Body Parser Middleware */
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json()); 
-
-
-/* Models */
-var User = bookshelf.Model.extend({
-  tableName: 'users',
-  hasTimestamps: true,
-
-  submissions: function () {
-  	return this.belongsTo(Link);
-  },
-  roles: function () {
-  	return this.belongsTo(Role);
-  }
-});
-
-var Link = bookshelf.Model.extend({
-  tableName: 'links',
-  hasTimestamps: true,
-
-  tags: function () {
-  	return this.belongsToMany(Tag);
-  },
-  submitter: function () {
-  	return this.belongsTo(Tag);
-  }
-});
-
-var Tag = bookshelf.Model.extend({
-  tableName: 'tags',
-  links: function () {
-  	return this.belongsToMany(Link);
-  },
-  submitter: function () {
-  	return this.belongsTo(User);
-  }
-});
-
-var Role = bookshelf.Model.extend({
-  tableName: 'roles'
-});
-
-
-/* Collections */
-var Users = bookshelf.Collection.extend({
-	model: User
-});
-
-var Links = bookshelf.Collection.extend({
-	model: Link
-});
-
-var Tags = bookshelf.Collection.extend({
-	model: Tags
-});
-
-var Roles = bookshelf.Collection.extend({
-	model: Role
-});
+app.use(bodyParser.json());
 
 
   /* User Routing */
@@ -123,7 +56,7 @@ var Roles = bookshelf.Collection.extend({
       })
       .otherwise(function (err) {
         res.status(500).json({error: true, data: {message: err.message}});
-      }); 
+      });
     });
 
 
