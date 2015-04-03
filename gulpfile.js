@@ -63,7 +63,7 @@ gulp.task('watch', function () {
 
 gulp.task('app', plugins.shell.task(['node app/app.js']));
 
-gulp.task('build_db', plugins.shell.task(['cd scripts && ./build_db.sh']));
+gulp.task('db', plugins.shell.task(['cd scripts && ./build_db.sh']));
 
 gulp.task('dev', function () {
   return run(['js:vendor', 'watch', 'app']);
