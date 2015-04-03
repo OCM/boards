@@ -3,12 +3,8 @@
 
 # TEAM
 
-    Andrew Brinker -- Co-Creator
-
-# THANKS
-
-    Lesley Piper
-    Anthony Sterrett
+    Andrew Brinker -- Co-Creator -- @AndrewBrinker
+    Krishna Parashar -- Co-Creator -- @KCParashar
 
 # TECHNOLOGY COLOPHON
 
@@ -18,4 +14,7 @@
     NPM,
     Sass,
     Modernizr,
-    Normalize.css
+    Normalize.css,
+    Express 4,
+    PostgreSQL,
+    A ton of plugins
