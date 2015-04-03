@@ -10,8 +10,7 @@
     "url": "https://github.com/parashar/api/blob/master/LICENSE"
   },
   "scripts": {
-    "dev": "node app/app.js && gulp dev",
-    "release": "NODE_ENV=release node app/app.js && gulp dev"
+    "dev": "gulp dev"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -58,6 +57,7 @@
     "lazy.js": "^0.4.0",
     "morgan": "^1.5.2",
     "pg-promise": "^0.7.1",
-    "run-sequence": "^1.0.2"
+    "run-sequence": "^1.0.2",
+    "gulp-shell": "^0.4.0"
   }
 }

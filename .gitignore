@@ -1,4 +1,8 @@
 db.json
+public/js/*
+public/js
+public/css/*
+public/css
 
 # Logs
 logs

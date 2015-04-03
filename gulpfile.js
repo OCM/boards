@@ -63,8 +63,10 @@ gulp.task('watch', function () {
   return run(['lint', 'js', 'sass']);
 });
 
+gulp.task('app', plugins.shell.task(['node app/app.js']));
+
 gulp.task('dev', function () {
-  return run('js:vendor', 'watch');
+  return run(['js:vendor', 'watch', 'app']);
 });
 
 gulp.task('help', plugins.taskListing);
