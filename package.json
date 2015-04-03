@@ -17,14 +17,15 @@
   },
   "config": {
     "dirs": {
-      "views": "/views",
-      "layouts": "/views/layouts",
-      "partials": "/views/partials"
+      "views":    "app/views",
+      "layouts":  "app/views/layouts",
+      "partials": "app/views/partials"
     },
     "site": {
       "host": "127.0.0.1",
       "port": 3000
-    }
+    },
+    "defaultLayout": "main"
   },
   "repository": {
     "type": "git",
