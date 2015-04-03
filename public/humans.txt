@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Andrew Brinker -- Co-Creator
+
+# THANKS
+
+    Lesley Piper
+    Anthony Sterrett
+
+# TECHNOLOGY COLOPHON
+
+    CSS3,
+    HTML5,
+    Gulp,
+    NPM,
+    Sass,
+    Modernizr,
+    Normalize.css

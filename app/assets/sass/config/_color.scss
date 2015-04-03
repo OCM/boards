@@ -1,0 +1,36 @@
+/**
+ * ## Config: Colors
+ *
+ * All config on the site should (nay, must!) come from here. If you need to
+ * add a color, first consider whether you really need to (you probably don't),
+ * and then add the color to here.
+ *
+ * All config should be added in HSL or HSLA format. No hex. No RGB. Definitely
+ * no keyword-config (seriously, the default keyword config are terrible).
+ */
+
+//-------------------------------------------------------------------
+// Background and Text
+//-------------------------------------------------------------------
+
+$color-bg:           hsla(210,  10%,  94%, 1) !default;
+$color-page:         hsla(  0,   0%, 100%, 1) !default;
+$color-bgOffset:     hsla( 47,  32%,  88%, 1) !default;
+$color-bgDarkOffset: hsla( 47,  32%,  70%, 1) !default;
+$color-text:         hsla(201,  12%,  20%, 1) !default;
+
+//-------------------------------------------------------------------
+// Links
+//-------------------------------------------------------------------
+
+$color-link:         hsla(210,  75%,  55%, 1) !default;
+$color-focusedLink:  hsla(210,  75%,  65%, 1) !default;
+$color-visitedLink:  hsla(210,  75%,  55%, 1) !default;
+
+//-------------------------------------------------------------------
+// Accents
+//-------------------------------------------------------------------
+
+$color-accent:       hsla(210,  75%,  55%, 1) !default;
+$color-altAccent:    hsla(210,  70%,  40%, 1) !default;
+

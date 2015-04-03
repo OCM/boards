@@ -1,0 +1,38 @@
+/**
+ * ## Base: Rhythm
+ *
+ * Vertical rhythm is all about alignment to a baseline grid. Part of that
+ * includes keeping margins consistently on the bottom of an element only.
+ *
+ * This is inspired by several things, including CSSWizardry's single-
+ * direction margin declarations [1] and Typecast's steps for establishing
+ * vertical rhythm [2].
+ *
+ * [1]: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ * [2]: http://typecast.com/blog/4-simple-steps-to-vertical-rhythm
+ */
+
+// Set a consistent vertical rhythm on all block-level elements.
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+table,
+dl,
+figure,
+pre {
+    margin: 0 0 $verticalMargin-base;
+}
+
+// Correct margins for nested lists.
+li ol,
+li ul {
+    margin-bottom: 0;
+}
+

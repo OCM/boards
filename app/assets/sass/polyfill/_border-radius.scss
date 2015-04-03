@@ -1,0 +1,16 @@
+/**
+ * ## Polyfill: Box-Sizing
+ *
+ * This just makes sure that box sizing can be set properly across all modern
+ * browsers.
+ */
+
+// Polyfill for setting border radius.
+//
+// @param {Number | List of Numbers} $radius - The radius being set
+// @output Vendor-prefixed border radius styles
+@mixin pf-borderRadius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}

@@ -1,0 +1,13 @@
+/**
+ * ## Config: Box Sizing
+ *
+ * Box sizing decides how the entire CSS box model works, making it more in
+ * line with the standard developer's intuition [1]. Per the original idea from
+ * Paul Irish of the Chrome team, it is set site-wide to border-box. Don't
+ * change this unless you have a very good reason to do so.
+ *
+ * [1]: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+// The default box sizing for the entire document
+$box-sizing: border-box !default;

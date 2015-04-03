@@ -1,0 +1,59 @@
+/**
+ * ## Component: Page Body
+ *
+ * Styles for main content and the sidebar.
+ */
+
+.pageBody {
+    background-color: $color-page;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 4em 4em 2em;
+    border: 1px solid $color-bgDarkOffset;
+    border-radius: 1em;
+    box-shadow: $boxShadow-shallow;
+
+    @media screen and (min-width: $respond-large) {
+        @include container($documentWidth);
+    }
+}
+
+    .pageBody .description {
+        margin-bottom: 2em;
+    }
+
+    .pageBody a {
+        text-decoration: none;
+        font-family: $fontFamily-secondary;
+    }
+
+    .pageBody ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pageBody section:first-child {
+        border-top: 1px solid $color-bgDarkOffset;
+    }
+
+    .pageBody section {
+        padding: 2em 4em;
+        margin: 0 -4em;
+        background: $color-bgOffset;
+        border-bottom: 1px solid $color-bgDarkOffset;
+    }
+
+    .pageBody h2 {
+        font-family: $fontFamily-secondary;
+        text-transform: uppercase;
+        font-size: $fontSize-base;
+        text-align: center;
+    }
+
+    .pageBody .small-text {
+        margin-top: 2em;
+        text-align: center;
+        font-size: $fontSize-smaller;
+        margin-bottom: 0;
+    }

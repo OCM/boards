@@ -1,0 +1,11 @@
+/**
+ * ## Config: Box Shadow
+ *
+ * This defines consistent box shadows to be used to imply depth throughout
+ * the site.
+ */
+
+$boxShadow-puddle:  rgba(0,0,0,.05) 0 0   1px;
+$boxShadow-shallow: rgba(0,0,0,.05) 0 2px 1px;
+$boxShadow-medium:  rgba(0,0,0,.05) 0 3px 5px;
+$boxShadow-deep:    rgba(0,0,0,.05) 0 5px 7px;

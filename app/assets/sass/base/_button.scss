@@ -1,0 +1,15 @@
+/**
+ * ## Base: Button
+ *
+ * Site-wide button styles.
+ */
+
+button {
+	background: $color-bgOffset;
+	border: 0;
+	padding: .25em .5em;
+	line-height: 1em;
+	font-style: normal;
+	font-weight: 700;
+	@include pf-borderRadius(3px);
+}
