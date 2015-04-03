@@ -1,0 +1,22 @@
+/**
+ * ## Component: Page Header
+ *
+ * The styles for the global site header.
+ */
+
+.pageHeader {
+    background: $color-bg url("/img/bg.png") scroll 0 0;
+    padding: 1em 2em;
+}
+
+    .pageHeader-content {
+        @include container($documentWidth);
+    }
+
+        .pageHeader .logo {
+            @include span(3 of 12);
+        }
+
+        .pageHeader .navBar {
+            @include span(9 of 12 last);
+        }

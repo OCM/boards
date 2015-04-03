@@ -3,6 +3,7 @@ var db      = require('../db');
 var router  = express.Router();
 
 router.get('/', function(req, res) {
+  /*
   db.query("SELECT title FROM links;", function (err, data) {
     if (err) {
       console.log(reason);
@@ -10,6 +11,8 @@ router.get('/', function(req, res) {
     }
     res.render('home', {links: data});
   });
+  */
+  res.render('home');
 });
 
 module.exports = router;
