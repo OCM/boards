@@ -4,7 +4,7 @@ var run     = require('run-sequence');
 var del     = require('del');
 var dirs    = require('./package.json').config.dirs;
 
-gulp.task('sass', function () {
+gulp.task('build:sass', function () {
   var src  = dirs.sass;
   var dest = dirs.public + '/css';
   plugins.util.log(plugins.util.colors.yellow('Building ' + src));
@@ -16,7 +16,7 @@ gulp.task('sass', function () {
              .on('error', plugins.util.log);
 });
 
-gulp.task('js:vendor', function () {
+gulp.task('build:js:vendor', function () {
   var src = dirs.js.vendor;
   var dest = dirs.public + '/js';
   plugins.util.log(plugins.util.colors.yellow('Building ' + src));
@@ -29,7 +29,7 @@ gulp.task('js:vendor', function () {
              .on('error', plugins.util.log);
 });
 
-gulp.task('js:main', function () {
+gulp.task('build:js:main', function () {
   var src = dirs.js.main;
   var dest = dirs.public + '/js';
   plugins.util.log(plugins.util.colors.yellow('Building ' + src));
@@ -43,11 +43,7 @@ gulp.task('js:main', function () {
              .on('error', plugins.util.log);
 });
 
-gulp.task('js', function () {
-  return run(['js:vendor', 'js:main']);
-});
-
-gulp.task('lint', function () {
+gulp.task('build:js:lint', function () {
   var src = dirs.js.main;
   plugins.util.log(plugins.util.colors.yellow('Linting ' + src));
   return gulp.src(src)
@@ -55,22 +51,22 @@ gulp.task('lint', function () {
              .pipe(plugins.jshint.reporter(plugins.stylish));
 });
 
-gulp.task('watch', function () {
-  gulp.watch(dirs.js.main, ['lint', 'js']);
-  gulp.watch(dirs.sass, ['sass']);
-  return run(['lint', 'js', 'sass']);
+gulp.task('build:js', function () {
+  return run(['build:js:vendor', 'build:js:main', 'build:js:lint']);
 });
 
-gulp.task('app', plugins.shell.task(['node app/app.js']));
+gulp.task('dev:watch', function () {
+  gulp.watch(dirs.js.main, ['build:js']);
+  gulp.watch(dirs.sass, ['build:sass']);
+  return run(['build:js', 'build:sass']);
+});
 
-gulp.task('db', plugins.shell.task(['cd scripts && ./build_db.sh']));
+gulp.task('dev:app', plugins.shell.task(['node app/app.js']));
+
+gulp.task('build:db', plugins.shell.task(['cd scripts && ./build_db.sh']));
 
 gulp.task('dev', function () {
-  return run(['js:vendor', 'watch', 'app']);
+  return run(['dev:watch', 'dev:app']);
 });
 
 gulp.task('help', plugins.taskListing);
-
-gulp.task('default', function () {
-  return run('help');
-});
