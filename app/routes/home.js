@@ -1,11 +1,15 @@
 var express = require('express');
-var router = express.Router();
-
-var db   = require("../../db.json");
-var conn = "postgres://" + db.user + ":" + db.pass + "@localhost/atrus";
+var db      = require('../db');
+var router  = express.Router();
 
 router.get('/', function(req, res) {
-  res.render('home', {name: 'Andrew'});
+  db.query("SELECT title FROM links;", function (err, data) {
+    if (err) {
+      console.log(reason);
+      return;
+    }
+    res.render('home', {links: data});
+  });
 });
 
 module.exports = router;
