@@ -22,7 +22,6 @@ gulp.task('js:vendor', function () {
   plugins.util.log(plugins.util.colors.yellow('Building ' + src));
   return gulp.src(src)
              .pipe(plugins.concat('vendor.js'))
-             .pipe(plugins.changed(dest))
              .pipe(gulp.dest(dest))
              .pipe(plugins.uglify())
              .pipe(plugins.rename('vendor.min.js'))
@@ -36,7 +35,6 @@ gulp.task('js:main', function () {
   plugins.util.log(plugins.util.colors.yellow('Building ' + src));
   return gulp.src(src)
              .pipe(plugins.concat('main.js'))
-             .pipe(plugins.changed(dest))
              .pipe(plugins.babel())
              .pipe(gulp.dest(dest))
              .pipe(plugins.uglify())
