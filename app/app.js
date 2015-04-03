@@ -1,35 +1,28 @@
-var express    = require('express');
-var exphbs     = require('express-handlebars');
-var bodyParser = require('body-parser');
-var morgan     = require('morgan')
-var routes     = require('./routes.js');
+var express = require('express');
+var exphbs  = require('express-handlebars');
+var body    = require('body-parser');
+var morgan  = require('morgan');
+var routes  = require('./routes.js');
+var config  = require('../package.json').config;
+var app     = express();
 
-// Define basic variables and initialize the app
-var host      = '127.0.0.1';
-var port      = 3000;
-var app       = express();
+app.use(body.urlencoded({extended: true}));
+app.use(body.json());
+app.use(morgan('dev'));
 
-// Set middleware
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-app.use(morgan('dev'))
-
-// Configure handlebars
-var handlebars_config = {
+app.engine('handlebars', exphbs({
     defaultLayout: 'main',
-    layoutsDir:    __dirname + '/views/layouts',
-    partialsDir:   __dirname + '/views/partials'
-};
-app.engine('handlebars', exphbs(handlebars_config));
-app.set('views', __dirname + '/views');
+    layoutsDir:    __dirname + config.dirs.layouts,
+    partialsDir:   __dirname + config.dirs.partials
+}));
+app.set('views', __dirname + config.dirs.views);
 app.set('view engine', 'handlebars');
 
-// Attach all routes defined in routes/routes.js
 routes.forEach(function (route) {
     app.use(route.path, route.route);
 });
 
-// Turn on the application
-app.listen(port, host, function () {
-  console.log('Server live at %s:%d in %s mode', host, port, app.get('env'));
+app.listen(config.site.port, config.site.host, function () {
+  console.log('Server live at %s:%d in %s mode',
+    config.site.host, config.site.port, app.get('env'));
 });

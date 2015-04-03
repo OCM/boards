@@ -2,10 +2,29 @@
   "name": "Atrus",
   "version": "0.0.1",
   "description": "The Atrus application",
+  "homepage": "http://atrus.co",
   "private": true,
   "main": "app.js",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/parashar/api/blob/master/LICENSE"
+  },
   "scripts": {
     "start": "node app/app.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "config": {
+    "dirs": {
+      "views": "/views",
+      "layouts": "/views/layouts",
+      "partials": "/views/partials"
+    },
+    "site": {
+      "host": "127.0.0.1",
+      "port": 3000
+    }
   },
   "repository": {
     "type": "git",
