@@ -1,6 +1,6 @@
 # Atrus
 
-Core Feature Set (MVP)
+## Core Feature Set (MVP)
 
 - Ability to search for topic
 - Ability to discover random content
@@ -11,13 +11,33 @@ Core Feature Set (MVP)
 - Ability to flag irrelevant content
 - Gravatar Images
 
-Later Feature Set
+## Future Feature Set
 
 - Ability to create personal boards
 - Pushover Notifications
 - Email Digest (Mailchimp)
 - Difficulty
 - Parent tags, dependent tags (Tag Hierarchy)
+
+## Routes
+```
+/
+/login
+/t/:tag
+/u/:user
+/settings
+/q?...
+/about (Static)
+/contact (Static)
+/donate (Static)
+```
+
+## API Workflow:
+1. User visits route.
+2. Do Authentication
+3. Get Require data from DB.
+4. Populate template
+5. Return rendered page to user. 
 
 ## Tag Categories
 
@@ -63,7 +83,6 @@ Later Feature Set
 │   ├── Software Engineering
 │   ├── Scientific Computing
 │   └── Computation Theory
-├── Red    - Literature
 ├── Yellow - Engineering
 ├── Black  - Mathematics
 ├── White  - Physical Sciences
@@ -72,8 +91,12 @@ Later Feature Set
 │   ├── Archeology
 │   ├── Economics
 │   ├── Education
-│   └── users.js
-└── schema.sql
+│   ├── Psychology 
+│   └── Sociology
+└── Red - Literature
+    ├── Oral Literature
+    ├── Written Literature
+    └── Historical Literature
 ```
 
 ## Permissions
@@ -93,7 +116,7 @@ Each permission group gets all the permissions of the ones below
     - Ban users
 
 
-## Stack Used
+## Stack
 
 - [Express.js](http://expressjs.com/)
 - [Node.js](nodejs.org)
