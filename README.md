@@ -123,3 +123,7 @@ Each permission group gets all the permissions of the ones below
 - [PostgreSQL](http://www.postgresql.org/)
 - [Passport.js](http://passportjs.org/)
 
+# Useful Links or Resources
+- PG on Ubuntu: https://help.ubuntu.com/community/PostgreSQL
+- Promises: https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example
+

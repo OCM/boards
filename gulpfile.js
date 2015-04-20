@@ -61,7 +61,7 @@ gulp.task('dev:watch', function () {
   return run(['build:js', 'build:sass']);
 });
 
-gulp.task('dev:app', plugins.shell.task(['node app/app.js']));
+gulp.task('dev:app', plugins.shell.task(['nodemon app/app.js']));
 
 gulp.task('build:db', plugins.shell.task(['cd scripts && ./build_db.sh']));
 

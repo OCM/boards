@@ -25,6 +25,6 @@ routes.forEach(function (route) {
 });
 
 app.listen(config.site.port, config.site.host, function () {
-  console.log('Running: %s:%d in %s mode',
+  console.log('Running: "%s:%d" in %s mode',
     config.site.host, config.site.port, app.get('env'));
 });
