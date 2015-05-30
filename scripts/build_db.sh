@@ -1,5 +1,3 @@
-dropdb atrus
-createdb atrus
 psql -U atrus -d atrus -h localhost -f schema.sql
 psql -U atrus -d atrus -h localhost -f add_users.sql
 psql -U atrus -d atrus -h localhost -f add_links.sql
