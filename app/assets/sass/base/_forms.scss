@@ -1,0 +1,63 @@
+/**
+ * ## Base: Forms
+ *
+ * Reset forms to be more consistent cross-browser.
+ */
+
+// Make sure all forms have the correct font.
+input,
+button,
+textarea,
+select,
+option {
+    font-family: $fontFamily-primary;
+}
+
+// Normalizes spacing on input elements cross-browser.
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+// Forces search inputs to use border-box
+input[type="search"] {
+    box-sizing: border-box;
+}
+
+// Fixes margins for radio and checkbox inputs cross-browser
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+// Forces file inputs to be block displayed
+input[type="file"] {
+    display: block;
+}
+
+// Fixes height for select elements
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+// Fixes fonts for optgroups
+select optgroup {
+    font-size: inherit;
+    font-style: inherit;
+    font-family: inherit;
+}
+
+// Fixes button sizing for numeric inputs
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    height: auto;
+}
+

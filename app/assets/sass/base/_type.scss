@@ -1,0 +1,60 @@
+/**
+ * ## Base: Type
+ *
+ * This sets the standard font sizes and styles for all typography on the site,
+ * using values taken directly from the configuration.
+ */
+
+// Set the font size and line height to the base levels on the body element
+// and the headers, and then replace as needed on the headers (exploit the
+// wonders of the cascade).
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: $fontSize-base;
+    line-height: $lineHeight-base;
+
+    @if $fontSmoothing {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+// The most important header is also the largest, just to make sure that it
+// stands out amongst all the others.
+h1 {
+    font-size: $fontSize-largest;
+}
+
+// The second and third most important headers share the same size, and should
+// be differentiated based on other styles.
+h2 {
+    font-size: $fontSize-larger;
+    margin-bottom: $verticalMargin-base;
+}
+
+h3 {
+    font-size: $fontSize-larger;
+    margin-top: 0.5 * $verticalMargin-base;
+    margin-bottom: 0.25 * $verticalMargin-base;
+}
+
+// The fourth and fifth are grouped same as the second and third, and are also
+// differentiated by style.
+h4 {
+    font-size: $fontSize-large;
+}
+
+h5 {
+    font-size: $fontSize-large;
+}
+
+// The sixth and final header is the same size as standard text, and is
+// differentiated from it solely by style.
+h6 {
+    font-size: $fontSize-base;
+}

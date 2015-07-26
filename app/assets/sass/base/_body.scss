@@ -1,0 +1,12 @@
+/**
+ * ## Base: Body
+ *
+ * Any styles that apply directly to the body element
+ */
+
+// Reset the colors based on the configuration.
+body {
+    background-color: $color-page;
+    color: $color-text;
+    font-family: $fontFamily-primary;
+}

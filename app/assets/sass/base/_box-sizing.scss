@@ -1,0 +1,22 @@
+/**
+ * ## Base: Box Sizing
+ *
+ * Set the global default box-sizing
+ *
+ * Defaults to `border-box`, per Paul Irish's suggestions[1]. Valid
+ * values are `content-box`, `padding-box`, and `border-box`. Their
+ * behavior are defined in [2]. Changing this value is a serious
+ * change that is likely to break your site without proper updates
+ * to the rest of the SCSS. Be careful.
+ *
+ * [1]: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * [2]: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+ */
+
+// Box sizing is set universally, and this is the only time the universal
+// selector should be used.
+*,
+*:after,
+*:before {
+    @include pf-boxSizing($box-sizing);
+}

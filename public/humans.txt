@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Andrew Brinker -- Co-Creator -- @AndrewBrinker
+    Krishna Parashar -- Co-Creator -- @KCParashar
+
+# TECHNOLOGY COLOPHON
+
+    CSS3,
+    HTML5,
+    Gulp,
+    NPM,
+    Sass,
+    Modernizr,
+    Normalize.css,
+    Express 4,
+    PostgreSQL,
+    A ton of plugins

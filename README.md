@@ -1,49 +1,105 @@
-# API
+# Atrus
 
-## Structure
+## Core Feature Set (MVP)
 
+- Ability to search for topic
+- Ability to discover random content
+- Ability to create account
+- Ability to submit links and tags
+- Ability to upvote/downvote content
+- Ability to link save content (?)
+- Ability to flag irrelevant content
+- Gravatar Images
 
-## Database Schema
-### Tables
+## Future Feature Set
 
-- Links have:
-    - name
-    - link
-    - upvotes
-    - downvotes
-    - tags -> reference to tag
-    - submitter -> reference to user
-    - timestamp
+- Ability to create personal boards
+- Pushover Notifications
+- Email Digest (Mailchimp)
+- Difficulty
+- Parent tags, dependent tags (Tag Hierarchy)
 
-- Users have:
-    - username
-    - email
-    - password
-    - description
-    - website
-    - karma (upvotes and downvotes for submissions)
-    - account creation date
-    - submitted links -> reference to links
-    - rank (admin, banned, standard)
-    - API user?
-    - Applications -> reference to applications
+## Routes
+```
+/
+/login
+/t/:tag
+/u/:user
+/settings
+/q?...
+/about (Static)
+/contact (Static)
+/donate (Static)
+```
 
-- Tags have:
-    - links -> reference to links
-    - description
-    - title
+## API Workflow:
+1. User visits route.
+2. Do Authentication
+3. Get Require data from DB.
+4. Populate template
+5. Return rendered page to user. 
 
-- Applications have:
-    - Name
-    - Description
-    - Requested endpoints -> reference to endpoints
+## Tag Categories
 
-- Endpoints have:
-    - Name
-    - Purpose
+- __Blue__: Computer Science
+- __Green__: Design
+- __Red__: Literature
+- __Yellow__: Engineering
+- __Black__: Mathematics
+- __White__: Physical Sciences
+- __Violet__: Social Sciences
 
+```
+.
+├── Blue - Computer Science (http://bit.ly/19L8QKw)
+│   ├── Web Programming
+│   ├── Mathematical Foundations
+│   ├── Algorithms
+│   ├── Data Structures
+│   ├── Artificial Intelligence
+│   ├── Communications
+│   ├── Security
+│   ├── Computer Architecture
+│   ├── Computer Graphics
+│   ├── Distributed Systems
+│   ├── Databases
+│   ├── Programming Languages
+│   ├── Software Engineering
+│   ├── Scientific Computing
+│   └── Computation Theory
+├── Green - Design (http://bit.ly/19L9hof)
+│   ├── Object Design
+│   ├── System Design
+│   ├── Design Tools
+│   ├── Experience Design
+│   ├── Environment Design
+│   ├── Communications
+│   ├── Security
+│   ├── Computer Architecture
+│   ├── Computer Graphics
+│   ├── Distributed Systems
+│   ├── Databases
+│   ├── Programming Languages
+│   ├── Software Engineering
+│   ├── Scientific Computing
+│   └── Computation Theory
+├── Yellow - Engineering
+├── Black  - Mathematics
+├── White  - Physical Sciences
+├── Violet - Social Sciences
+│   ├── Anthropology
+│   ├── Archeology
+│   ├── Economics
+│   ├── Education
+│   ├── Psychology 
+│   └── Sociology
+└── Red - Literature
+    ├── Oral Literature
+    ├── Written Literature
+    └── Historical Literature
+```
 
-### Permissions
+## Permissions
 
 Each permission group gets all the permissions of the ones below
 
@@ -60,9 +116,14 @@ Each permission group gets all the permissions of the ones below
     - Ban users
 
 
-## Stack Used
+## Stack
+
 - [Express.js](http://expressjs.com/)
 - [Node.js](nodejs.org)
 - [PostgreSQL](http://www.postgresql.org/)
 - [Passport.js](http://passportjs.org/)
+
+# Useful Links or Resources
+- PG on Ubuntu: https://help.ubuntu.com/community/PostgreSQL
+- Promises: https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example
 

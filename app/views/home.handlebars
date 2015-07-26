@@ -1,0 +1,12 @@
+<ul>
+
+    {{#each links}}
+        <li>{{title}}</li>
+    {{/each}}
+
+    <!-- Calls `foo` helper, overridden at render-level. -->
+    <p>{{foo}}</p>
+ 
+    <!-- Calls `bar` helper, defined at instance-level. -->
+    <p>{{bar}}</p>
+</ul>

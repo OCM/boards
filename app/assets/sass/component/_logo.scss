@@ -1,0 +1,33 @@
+/**
+ * ## Component: Logo
+ *
+ * The styles for the Atrus logo.
+ */
+
+.logo {
+    font-family: $fontFamily-secondary;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: $fontSize-larger;
+}
+
+    .logo-icon {
+        display: inline-block;
+        text-indent: -9999px;
+        width: 1em;
+        height: 1em;
+        background: url("/img/logo.svg") no-repeat;
+        background-size: contain;
+        margin-right: .25em;
+        vertical-align: -.15em;
+    }
+
+    .logo a {
+        color: $color-text;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $color-text;
+        }
+    }

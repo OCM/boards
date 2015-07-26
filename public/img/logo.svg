@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="3044px" height="3251px" viewBox="0 0 3044 3251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Atrus Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.105 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.105 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="100%" y1="50%" x2="-2.48949813e-15%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#00AEEF" offset="0%"></stop>
+            <stop stop-color="#00BAFF" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="-10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="-2.48949813e-15%" y1="50%" x2="100%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#00AEEF" offset="0%"></stop>
+            <stop stop-color="#009BD5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M2746.6875,22.1562217 L1521.94944,883.110032 L305.406253,22.1562217 L25.658694,2408.31253 L1521.94944,3232.71875 L3018.24024,2408.31253 L2746.6875,22.1562217 Z" id="Book-3" fill="#F0F0F0" filter="url(#filter-1)" sketch:type="MSShapeGroup" transform="translate(1521.949466, 1627.437486) scale(1, -1) translate(-1521.949466, -1627.437486) "></path>
+        <path d="M2861.84375,22.1562217 L1521.94944,883.110032 L172.468753,55.0625289 L25.658694,2408.31253 L1521.94944,3232.71875 L3018.24024,2408.31253 L2861.84375,22.1562217 Z" id="Book-2" fill="#F0F0F0" filter="url(#filter-2)" sketch:type="MSShapeGroup" transform="translate(1521.949466, 1627.437486) scale(1, -1) translate(-1521.949466, -1627.437486) "></path>
+        <path d="M3018.24024,22.1562217 L1521.94944,850.203725 L25.658694,22.1562217 L25.658694,2375.40622 L1521.94944,3199.81244 L3018.24024,2375.40622 L3018.24024,22.1562217 Z" id="Book" fill="url(#linearGradient-3)" filter="url(#filter-4)" sketch:type="MSShapeGroup" transform="translate(1521.949466, 1610.984333) scale(1, -1) translate(-1521.949466, -1610.984333) "></path>
+        <path d="M3018.24024,22.1562217 L1521.94944,850.203725 L25.658694,22.1562217 L25.658694,2375.40622 L1521.94944,3199.81244 L3018.24024,2375.40622 L3018.24024,22.1562217 Z" id="Book-4" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" transform="translate(1521.949466, 1610.984333) scale(1, -1) translate(-1521.949466, -1610.984333) "></path>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+/**
+ * ## Component: Nav Bar
+ *
+ * The styles for the main site navigation.
+ */
+
+.navBar {
+    display: inline-block;
+    font-family: $fontFamily-secondary;
+}
+
+    .navBar-content {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .navBar-content li {
+            display: inline;
+            margin-right: .5em;
+        }
+
+            .navBar-content a {
+                text-decoration: none;
+            }

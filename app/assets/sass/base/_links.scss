@@ -1,0 +1,40 @@
+/**
+ * ## Base: Links
+ *
+ * Links are the cornerstone of HTML (they're what makes the text 'hyper') and
+ * so link styles are one of the most important part of any website design. It
+ * should be obvious what state a link is in, and links should provide the same
+ * information they provide on every site. This means that all the usual states
+ * of links have to properly accounted for, including `:visited`.
+ */
+
+// Links default to using a color different from the surrounding text and
+// being underlined. You can always change this, but note that users should
+// have some way besides color to identify links, and it should be clear enough
+// that they are never confused about what is a link and what isn't.
+a {
+    color: $color-link;
+    text-decoration: underline;
+}
+
+    // Once it's been visited the link blends in more but keeps the underline.
+    a:visited {
+        color: $color-visitedLink;
+        text-decoration: underline;
+    }
+
+    // A lighter version of the same color indicates a hovered state.
+    a:hover,
+    a:focus,
+    a:visited:hover,
+    a:visited:focus {
+        color: $color-focusedLink;
+        outline: 0;
+    }
+
+    // And the color changes entirely when the link is clicked.
+    a:active,
+    a:visited:active {
+        color: $color-bgOffset;
+        outline: 0;
+    }

@@ -1,0 +1,16 @@
+/**
+ * ## Polyfill: Box-Sizing
+ *
+ * This just makes sure that box sizing can be set properly across all modern
+ * browsers.
+ */
+
+// Polyfill for setting box sizing.
+//
+// @param {String} $sizing - The box sizing being set
+// @output Vendor-prefixed box sizing styles
+@mixin pf-boxSizing($sizing) {
+  -webkit-box-sizing: $sizing;
+     -moz-box-sizing: $sizing;
+          box-sizing: $sizing;
+}

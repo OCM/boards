@@ -1,0 +1,19 @@
+/**
+ * ## Config: Z-Index
+ *
+ * Don't ever use non-standard z-index values, use these instead.
+ *
+ * $zIndex-1 should only be used for the document background.
+ * $zIndex-9 should only be used for whole-document overlays.
+ * $zIndex-5 is the standard middle ground height.
+ */
+
+$zIndex-1: 100 !default;
+$zIndex-2: 200 !default;
+$zIndex-3: 300 !default;
+$zIndex-4: 400 !default;
+$zIndex-5: 500 !default;
+$zIndex-6: 600 !default;
+$zIndex-7: 700 !default;
+$zIndex-8: 800 !default;
+$zIndex-9: 900 !default;

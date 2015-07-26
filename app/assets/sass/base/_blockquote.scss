@@ -1,0 +1,11 @@
+/**
+ * ## Base: Blockquote
+ *
+ * Blockquotes should be clearly differentiated from other text around them.
+ */
+
+blockquote {
+    border-left: .25em solid $color-bgOffset;
+    padding-left: 1.75em;
+    color: $color-accent;
+}

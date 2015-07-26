@@ -1,0 +1,19 @@
+/**
+ * ## Config: Responsive Grid and Breakpoints
+ *
+ * Sets the widths of various things as the browser window changes.
+ */
+
+// Silly, I know
+$base-line-height: $lineHeight-base;
+
+// Overwrite the default Susy configuration with my own.
+$susy: (
+    gutters: 1.5,
+    global-box-sizing: border-box,
+    use-custom: (rem: true)
+);
+
+$documentWidth: 60rem;
+
+$respond-large: $documentWidth + 2rem;
